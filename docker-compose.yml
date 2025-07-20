@@ -1,0 +1,10 @@
+services:
+  swagger-ui:
+    #build: .
+    image: frigateswagger:latest
+    ports:
+      - "5001:5001"
+    volumes:
+      - .:/app
+    container_name: frigate-swagger-ui
+    restart: unless-stopped
