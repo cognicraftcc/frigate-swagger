@@ -1,23 +1,22 @@
-# Setup
-    ```
-    uv init .
-    uv add flask flask-swagger-ui pyyaml
-    ```
+# Frigate OpenAPI (Swagger) Docs 
 
-# Run
+This is a simple docker implementation of the Swagger documentation of the Frigate API implemented such that you can point to your own installation of Frigate as a learning tool on how to access your data. 
 
-1. Create .env using env-sample as example.
+It uses a modified frigate.yml from the following [GitHub page](https://github.com/intruder-detection/frigate-http-api-typescript).
 
-2. Run from terminal
 
-    ```
-    uv run python app.py
-    ```
+# To run
 
-3. Run in Docker
-Set the env settings in docker-compose.yml then run the following:
+1. Update the SERVER_URL in docker-compose.yml to point to your Frigate URL.
+
+2. Build the docker image
 
     ```
     docker build -t frigateswagger:latest .
+    ```
+
+3. Then run
+
+    ```
     docker compose up
     ```
