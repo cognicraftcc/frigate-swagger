@@ -6,7 +6,5 @@ services:
       - SERVER_URL=https://demo.frigate.video
     ports:
       - "5001:5001"
-    volumes:
-      - .:/app
     container_name: frigate-swagger-ui
     restart: unless-stopped
