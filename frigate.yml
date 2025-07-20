@@ -3,7 +3,7 @@ info:
   title: Demo CCTV API
   version: 1.0.0
 servers:
-  - url: http://192.168.236.238:5000
+  - url: ${SERVER_URL}
 tags:
   - name: Management & Information
     description: Management & Information
